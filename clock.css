@@ -1,0 +1,84 @@
+body{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: black;
+	overflow: hidden;
+}
+#time{
+	color: white;
+	display: flex;
+	gap: 40px;
+}
+
+#time .circle{
+	position: relative;
+	height: 150px; width: 150px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#time .circle svg{
+	position: relative;
+	height: 150px; width: 150px;
+	transform: rotate(270deg);
+}
+#time .circle svg circle{
+	height: 100%; width: 100%;
+	fill: transparent;
+	stroke: transparent;
+	stroke-width: 4;
+	transform: translate(5px,5px);
+}
+#time .circle svg circle:nth-child(2){
+	stroke: var(--clr);
+	stroke-dasharray: 440px;
+}
+/*
+#time .circle svg #c1{
+	stroke: blue;
+	stroke-dasharray: 440px;
+}
+#time .circle svg #c2{
+	stroke: red;
+	stroke-dasharray: 440px;
+}
+#time .circle svg #c3{
+	stroke: yellow;
+	stroke-dasharray: 440px;
+}
+*/
+#time div{
+	position: absolute;
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: 500;
+}
+#time div span{
+	position: absolute;
+	transform: translateX(-50%) translateY(-10px);
+	font-size: 15px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+
+}
+#time .ap{
+	position: relative;
+	font: 1em;
+	transform: translateX(-20px);
+}
+
+.dots{
+	position: absolute;
+	height: 100%; width: 100%;
+}
+.dots::before{
+	content: " ";
+	position: absolute;
+	height: 15px; width: 15px;
+	top: -3px;
+	background: var(--clr);
+	border-radius: 50%;
+	box-shadow: 0 0 20px var(--clr),0 0 60px var(--clr);
+}
